@@ -30,10 +30,8 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   // reset the website body with the new html output
-  document.querySelector(
-    "#widget_content"
-  ).innerHTML = `<div class="widget"> ${cover}
-
+  document.querySelector("#widget_content").innerHTML = `
+  <div class="widget"> ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name == null ? "Name" : variables.name} ${
     variables.lastName == null ? "Lastname" : variables.lastName
@@ -90,7 +88,7 @@ window.onload = function() {
     role: null,
     country: null,
     city: null,
-    backgroundcolor: null
+    backgroundColor: null
   };
   render(window.variables); // render the card for the first time
 
